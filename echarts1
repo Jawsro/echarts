@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="echarts.min.js"></script>
+    <style>
+        #main{
+            width:500px;
+            height:500px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!---  柱状图  --->
+    <div id="main"></div>
+    <script>
+        //获取显示图像容器
+        let main=document.getElementById("main");
+        //创建mychart对象
+        let mychart=echarts.init(main);
+        //创建配置项目
+        let option={
+            titli:{text:"柱状图"},
+            xAxis:{data:["连衣裙","牛仔裤","小西装","半身裙","打底衫"]},
+            yAxis:{},
+            series:[
+                {type:"bar",data:[100,200,300,220,150]}
+            ]
+        }
+        //将配置添加mychart
+        mychart.setOption(option)
+    </script>
+</body>
+</html>
