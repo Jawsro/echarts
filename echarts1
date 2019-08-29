@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="echarts.min.js"></script>
+    <script src="echarts.js"></script>
     <style>
         #main{
             width:500px;
@@ -25,7 +25,14 @@
         let mychart=echarts.init(main);
         //创建配置项目
         let option={
-            titli:{text:"柱状图"},
+            title:{
+                text:"柱状图",
+                x:"center",
+                textStyle:{
+                    fontSize:30,
+                    fontWeight:0
+                    }
+                },
             xAxis:{data:["连衣裙","牛仔裤","小西装","半身裙","打底衫"]},
             yAxis:{},
             series:[
